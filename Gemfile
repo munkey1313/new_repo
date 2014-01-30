@@ -13,8 +13,10 @@ group :production do
      gem 'rails_12factor'
 end
 
-# Use SCSS for stylesheets
+#devise 
 gem 'devise'
+
+# Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
 # use bootstrap stylesheets
@@ -44,7 +46,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby'
 
 # Use unicorn as the app server
 # gem 'unicorn'
