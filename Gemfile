@@ -16,8 +16,10 @@ end
 # Use SCSS for stylesheets
 gem 'devise'
 gem 'sass-rails', '~> 4.0.0'
+
 # use bootstrap stylesheets
 gem "bootstrap-sass", "~> 3.0.3.0"
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 #This is a test comment
