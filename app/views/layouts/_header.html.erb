@@ -14,14 +14,19 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
         <% if member_signed_in? %>
           <li><%= link_to "Account Settings", edit_member_registration_path %></li>
-          <li><%= link_to "Log out", destroy_member_session_path, method: :delete %></li>
+          <li><%= link_to "Sign Out", destroy_member_session_path, method: :delete %></li>
         <% else %>
-          <li><%= link_to "Sign in", new_member_session_path %></li>
-        <% end %> 
+        <div class="form-group">
+          <li><%= form_for(:member, :url => session_path(:member)) do |f| %>
+            <p></p>
+              <%= f.text_field :email%>
+              <%= f.password_field :password%>
+              <%= f.submit 'Sign in' %>
+          <% end %></li>
+        </div>
+        <% end %>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-->
+    </div>
 </nav>
