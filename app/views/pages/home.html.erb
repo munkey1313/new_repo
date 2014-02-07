@@ -1,2 +1,84 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<body>
+
+	<div class="jumbotron">
+  		<h1>Fantasy Immortals</h1>
+	</div>
+
+
+	<div class="row">
+		<div class="col-sm-5">
+			<h1>Old School</h1>
+		</div>
+		<div class="col-sm-2">
+			<h3>VS</h3>
+		</div>
+		<div class="col-sm-5">
+			<h1>New School</h1>
+		</div>
+	</div>
+
+
+	<!-- Carousel -->
+	<div class="row">
+		<div class="col-sm-5">
+			<div id="myCarousel" class="carousel slide">		
+				<div class="carousel-inner">
+					<div class="item active">
+						<%= image_tag 'oldfootball.jpg' %>
+					</div>
+
+					<div class="item">
+						<%= image_tag 'oldbasketball.jpg' %>
+					</div>
+									
+					<div class="item">
+						<%= image_tag 'oldbaseball.jpg' %>
+					</div>
+				</div>			
+				<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<span class="icon-prev"></span></a>
+
+				<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				<span class="icon-next"></span></a>
+			</div>
+		</div>
+	<!-- End Carousel -->
+
+	<div class="col-sm-2 vertical-align">
+  		<div class="btn-group" id="learnBtn">
+    		<button type="button" class="btn btn-lg btn-warning">Learn More</button>
+  		</div>
+  	</div>	
+
+	<!-- Carousel2 -->
+		<div class="col-sm-5">
+			<div id="myCarousel2" class="carousel slide">		
+				<div class="carousel-inner">
+					<div class="item active">
+						<%= image_tag 'footballplayer.jpg' %>
+					</div>
+
+					<div class="item">
+						<%= image_tag 'basketballplayer.jpg' %>
+					</div>
+									
+					<div class="item">
+						<%= image_tag 'baseballplayer.jpg' %>
+					</div>
+				</div>			
+				<a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+				<span class="icon-prev"></span></a>
+
+				<a class="right carousel-control" href="#myCarousel2" data-slide="next">
+				<span class="icon-next"></span></a>
+			</div>
+		</div>
+	<!-- End Carousel2 -->
+	</div>	
+
+	<div class="btn-group btn-group-justified">
+  		<div class="btn-group" id="registerBtn">
+    		<button type="button" class="btn btn-lg btn-danger">Register Now!</button>
+  		</div>
+  	</div>		
+</body>
