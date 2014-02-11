@@ -1,0 +1,53 @@
+body {
+	padding-top: 30px;
+}
+
+.container {
+	max-width: 1000px;
+}
+
+.row {
+	text-align: center;
+}
+
+.btn-warning {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.btn-danger {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+#learnBtn {
+	padding-top: 100px;
+}
+
+#registerBtn {
+	padding-top: 30px;
+}
+
+/* Jumbotron
+============================ */
+
+.jumbotron {
+	text-align: center;
+	max-height: 105px;
+}
+
+/* Glyphicons
+============================ */
+
+.glyphicon {
+	font-size: 3em;
+	display: block;
+	margin: auto;
+	color: #3a87ad;
+}
+
+/* Carousel
+============================ */
+
+
+
