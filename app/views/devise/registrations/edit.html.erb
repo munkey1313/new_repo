@@ -3,12 +3,23 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
 
+  <% if @member.image.blank? %>
+      <div style="text-align:center;"><img src="http://edpov.stanford.edu/sites/default/files/defaultUserIcon.png"></div>
+      <br />
+    <% else %>
+      <div style="text-align:center;"><%=  image_tag @member.image.url(:medium) %></div>
+    <% end %>
+
   <div class="form-group">
    <%= f.text_field :username, class: "form-control", :autofocus => true, :placeholder => "Username" %>
   </div>
 
   <div class="form-group">
    <%= f.text_field :name, class: "form-control", :placeholder => "Name" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.file_field :image, class: 'form-control' %>
   </div>
   
   <div class="form-group">

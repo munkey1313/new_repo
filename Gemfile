@@ -16,6 +16,9 @@ end
 #devise 
 gem 'devise'
 
+# Paperclip https://github.com/thoughtbot/paperclip
+gem 'paperclip', '~> 3.0'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
