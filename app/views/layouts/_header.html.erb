@@ -2,38 +2,47 @@
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex1-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>      
-      <%= link_to "Fantasy Immortals", root_path, class: "navbar-brand" %>
+      </button> 
+      <ul id="lrgLink" class="nav navbar-nav">   
+        <li><a class="main-logo pull-left" href="/">FANTASY IMMORTALS</a></li>
+      </ul>
     </div>
    
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><%= link_to "Register Now!", "#" %></li>
-        <li><%= link_to "Forgot Username?", "#" %></li>
-        <li><%= link_to "Forgot Password?", "#" %></li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <% if member_signed_in? %>
-          <li><%= link_to "Account Settings", edit_member_registration_path %></li>
-          <li><%= link_to "Sign Out", destroy_member_session_path, method: :delete %></li>
-        <% else %>
-        <div class="form-group">
-          <li><%= form_for(:member, :url => session_path(:member)) do |f| %>
-            <p></p>             
-              <%= f.text_field :email, :placeholder => 'email' %>
-              <%= f.password_field :password, :placeholder => 'password' %>
-              <%= f.submit 'Sign in' %>
-          <% end %></li>
-        </div>
-        <% end %>
-      </ul>
-    </div>
+    
+      <div class="collapse navbar-collapse" id="navbar-ex1-collapse">        
+        <div class="row">
+          <div class="container">
+            <div class="col-sm-offset-4">
+              <ul class="nav navbar-nav navbar-right">
+                <% if member_signed_in? %>
+                  <li><%= link_to "ACCOUNT SETTINGS", edit_member_registration_path %></li>
+                  <li><%= link_to "SIGN OUT", destroy_member_session_path, method: :delete %></li>
+                <% else %>
+                <div class="form-group">
+                  <li><%= form_for(:member, :url => session_path(:member)) do |f| %>
+                    <p></p>             
+                      <%= f.text_field :email, :placeholder => 'EMAIL' %>
+                      <%= f.password_field :password, :placeholder => 'PASSWORD' %>
+                      <%= f.submit 'SIGN IN' %>
+                  <% end %></li>
+                </div>
+                <% end %> 
+              </ul>
+              <ul id="smallLinks" class="nav navbar-nav pull-right">
+                <% if !member_signed_in? %>
+                  <li><%= link_to "FORGOT PASSWORD?", new_member_password_path %></li>
+                  <li><%= link_to "CONTACT US", '/contact%20' %></li>
+                <% end %>
+              </ul>          
+            </div>
+          </div>
+        </div>      
+      </div>
   </div>
 </nav>

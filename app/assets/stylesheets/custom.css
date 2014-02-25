@@ -1,5 +1,9 @@
 body {
-	padding-top: 30px;
+	padding-top: 90px;
+	font-family: 'Andalus';
+	background: url('background.jpg');
+	background-size: 1440px 800px;
+	background-repeat:no-repeat;
 }
 
 .container {
@@ -10,14 +14,42 @@ body {
 	text-align: center;
 }
 
-.btn-warning {
-	padding-top: 5px;
-	padding-bottom: 5px;
+.form-group {
+	margin-bottom: 0;
 }
 
-.btn-danger {
-	padding-top: 25px;
-	padding-bottom: 25px;
+.h1 {
+	font-family: "Andalus";
+}
+
+.btn.btn-lg.btn-warning {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 20px;
+}
+
+.btn.btn-lg.btn-danger {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 30px;
+}
+
+.main-logo {
+	width: 68px;
+	height: 73px;
+	text-indent: 85%;
+	white-space: nowrap;	
+	background: url('FILogo.jpg') no-repeat;
+	background-size: 100%;
+}
+
+#lrgLink {
+	font-size: 18px;
+}
+
+#smallLinks {
+	font-size: 11px;
+	max-height: 30px;
 }
 
 #learnBtn {
@@ -25,15 +57,23 @@ body {
 }
 
 #registerBtn {
-	padding-top: 30px;
+	padding-top: 15px;
 }
+
+#headingText {
+	padding-top: 45px;
+	padding-bottom: 15px;
+	font-size: 30px;
+}
+
 
 /* Jumbotron
 ============================ */
 
 .jumbotron {
 	text-align: center;
-	max-height: 105px;
+	max-height: 70px;
+	padding-top: 35px;
 }
 
 /* Glyphicons
