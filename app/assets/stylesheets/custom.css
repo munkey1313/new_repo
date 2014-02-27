@@ -2,7 +2,7 @@ body {
 	padding-top: 90px;
 	font-family: 'Andalus';
 	background: url('background.jpg');
-	background-size: 1440px 800px;
+	background-size: 1440px 1000px;
 	background-repeat:no-repeat;
 }
 
@@ -18,9 +18,22 @@ body {
 	margin-bottom: 0;
 }
 
-.h1 {
-	font-family: "Andalus";
+h3 {
+	color: white;
 }
+
+a {
+	color: black;
+}
+
+#headingText {
+	padding-top: 45px;
+	padding-bottom: 15px;
+	font-size: 30px;
+}
+
+/* Buttons
+=====================================*/
 
 .btn.btn-lg.btn-warning {
 	padding-top: 5px;
@@ -28,28 +41,12 @@ body {
 	font-size: 20px;
 }
 
-.btn.btn-lg.btn-danger {
+.btn.btn-lg.btn-default {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	font-size: 30px;
-}
-
-.main-logo {
-	width: 68px;
-	height: 73px;
-	text-indent: 85%;
-	white-space: nowrap;	
-	background: url('FILogo.jpg') no-repeat;
-	background-size: 100%;
-}
-
-#lrgLink {
-	font-size: 18px;
-}
-
-#smallLinks {
-	font-size: 11px;
-	max-height: 30px;
+	background: #A00;
+	color: #000;
 }
 
 #learnBtn {
@@ -60,11 +57,38 @@ body {
 	padding-top: 15px;
 }
 
-#headingText {
-	padding-top: 45px;
-	padding-bottom: 15px;
-	font-size: 30px;
+/* Logos & Icons
+=====================================*/
+
+.main-logo {
+	width: 68px;
+	height: 73px;
+	text-indent: 85%;
+	white-space: nowrap;	
+	background: url('FILogo.jpg') no-repeat;
+	background-size: 100%;
 }
+
+.glyphicon {
+	font-size: 3em;
+	display: block;
+	margin: auto;
+	color: #3a87ad;
+}
+
+/* Navbar
+=====================================*/
+
+#lrgLink {
+	font-size: 18px;
+}
+
+#smallLinks {
+	font-size: 11px;
+	max-height: 30px;
+}
+
+
 
 
 /* Jumbotron
@@ -76,15 +100,6 @@ body {
 	padding-top: 35px;
 }
 
-/* Glyphicons
-============================ */
-
-.glyphicon {
-	font-size: 3em;
-	display: block;
-	margin: auto;
-	color: #3a87ad;
-}
 
 /* Carousel
 ============================ */
