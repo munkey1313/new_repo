@@ -5,6 +5,7 @@ FantasyImmortals::Application.routes.draw do
   root "pages#home"
   get '/learn ' => "pages#learn"
   get '/contact ' => "pages#contact"
+  get '/dashboard' => "pages#dashboard"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
