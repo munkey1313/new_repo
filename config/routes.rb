@@ -1,4 +1,6 @@
 FantasyImmortals::Application.routes.draw do
+  resources :leagues
+
   devise_for :members, :controllers => {:user_controller => "user_controller" }
   root "pages#home"
   get '/learn ' => "pages#learn"
