@@ -3,7 +3,7 @@ class LeagueMailer < ActionMailer::Base
  
   def league_mailer(user)
     @member = user.member
-    @league = user.league.name
+    @league = user.name
     @url  = 'http://162.144.84.38'
 	    mail(to: @member.email, subject: 'Im on a boat')
   end
