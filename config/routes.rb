@@ -1,4 +1,5 @@
 FantasyImmortals::Application.routes.draw do
+  get "dashboard/show"
   resources :leagues
 
   devise_for :members, :controllers => {:user_controller => "user_controller" }

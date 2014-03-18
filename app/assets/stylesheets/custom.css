@@ -32,6 +32,31 @@ a {
 	font-size: 30px;
 }
 
+/* Dashboard
+=====================================*/
+.container #dashCont {
+	max-width: 1500px;
+}
+
+#dashJumbo {
+	background: #999966;
+	max-height: 50px;
+}
+
+#dashMain {
+	background: #999966;
+	max-width: 850px;
+}
+
+#dashScroll {
+	background: gray;
+	max-width: 700px;
+}
+
+#dashFriend {
+	background: #999966;
+}
+
 /* Buttons
 =====================================*/
 
@@ -47,6 +72,14 @@ a {
 	font-size: 30px;
 	background: #A00;
 	color: #000;
+}
+
+.btn.btn-primary.btn-lg {
+	padding-bottom: 10px;
+}
+
+#dashBtn {
+	font-size: 15px;
 }
 
 #learnBtn {
