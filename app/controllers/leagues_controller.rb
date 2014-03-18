@@ -26,9 +26,9 @@ class LeaguesController < ApplicationController
   # POST /leagues.json
   def create
     @league = current_member.leagues.build(league_params)
-
     respond_to do |format|
       if @league.save
+        LeagueMailer.league_mailer(@league).deliver
         format.html { redirect_to @league, notice: 'League was successfully created.' }
         format.json { render action: 'show', status: :created, location: @league }
       else
