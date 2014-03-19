@@ -11,11 +11,11 @@
     <% @members.each do |member| %>
     <% if member == current_member %>
       <tr>
-        <td><h2><%= member.username %> (me)<h2> </td>
+        <td><h2><%= link_to member.username, "../members/#{member.id}" %> (me)<h2> </td>
       </tr>
     <% else %>
       <tr>
-        <td><h2><%= member.username %><h2></td>
+        <td><h2><%= link_to member.username, "../members/#{member.id}" %><h2></td>
       </tr>
     <% end %>
     <% end %>
