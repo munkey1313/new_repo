@@ -12,11 +12,22 @@
     <% if member == current_member %>
       <tr>
         <td><h2><%= link_to member.username, "../members/#{member.id}" %> (me)<h2> </td>
+        <% if member.image.blank? %>
+        
+        <% else %>
+           <td><%=  image_tag member.image.url(:thumb) %></td>
+        <% end %>
       </tr>
     <% else %>
       <tr>
         <td><h2><%= link_to member.username, "../members/#{member.id}" %><h2></td>
+        <% if member.image.blank? %>
+
+        <% else %>
+           <td><%=  image_tag member.image.url(:thumb) %></td>
+        <% end %>
       </tr>
+      
     <% end %>
     <% end %>
   </tbody>
