@@ -33,8 +33,8 @@ FantasyImmortals::Application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'gmail.com',
-    user_name:            'pjveadev@gmail.com',
-    password:             'thermaltake',
+    user_name:            'email',
+    password:             'password',
     authentication:       'plain',
     enable_starttls_auto: true  
   }
