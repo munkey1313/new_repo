@@ -2,6 +2,7 @@ class LeaguesController < ApplicationController
   before_action :set_league, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_member!, except: [:index, :show]
 
+
   # GET /leagues
   # GET /leagues.json
   def index
@@ -29,7 +30,7 @@ class LeaguesController < ApplicationController
     respond_to do |format|
       if @league.save
         LeagueMailer.league_mailer(@league).deliver
-        format.html { redirect_to @league, notice: 'League was successfully created.' }
+        format.html { redirect_to dashboard_url, notice: 'League was successfully created.' }
         format.json { render action: 'show', status: :created, location: @league }
       else
         format.html { render action: 'new' }
@@ -43,7 +44,7 @@ class LeaguesController < ApplicationController
   def update
     respond_to do |format|
       if @league.update(league_params)
-        format.html { redirect_to @league, notice: 'League was successfully updated.' }
+        format.html { redirect_to dashboard_url, notice: 'League was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -57,7 +58,7 @@ class LeaguesController < ApplicationController
   def destroy
     @league.destroy
     respond_to do |format|
-      format.html { redirect_to leagues_url }
+      format.html { redirect_to dashboard_url }
       format.json { head :no_content }
     end
   end
