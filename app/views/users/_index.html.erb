@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>User Name</th>
+      <th></th>
     </tr>
   </thead>
 
@@ -12,10 +13,23 @@
     <% if member == current_member %>
       <tr>
         <td><h2><%= member.username %> (me)<h2> </td>
+
+          <% if member.image.blank? %>
+             <td><img src="http://edpov.stanford.edu/sites/default/files/defaultUserIcon.png"></td>
+              <br />
+          <% else %>
+              <td><%=  image_tag member.image.url(:thumb) %></td>
+          <% end %>
       </tr>
     <% else %>
       <tr>
         <td><h2><%= member.username %><h2></td>
+        <% if member.image.blank? %>
+
+            
+        <% else %>
+            <td><%=  image_tag member.image.url(:thumb) %></td>
+        <% end %>
       </tr>
     <% end %>
     <% end %>
