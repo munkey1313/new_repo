@@ -1,0 +1,30 @@
+<% if @leagues.present? %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @leagues.each do |league| %>
+    <% if league.member == current_member %>
+      <tr>
+        <td><%= league.name %></td>
+        <td><%= link_to 'Show', league %></td>
+        <td><%= link_to 'Edit', edit_league_path(league) %></td>
+        <td><%= link_to 'Destroy', league, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<% else %>
+
+<h1>You do not have any leagues</h1>
+<% end %>

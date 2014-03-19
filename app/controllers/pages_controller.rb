@@ -6,5 +6,7 @@ class PagesController < ApplicationController
   	end
 
   	def dashboard
+  		@leagues = League.all
+  		@members = Member.all
   	end
 end

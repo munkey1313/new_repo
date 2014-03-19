@@ -1,0 +1,28 @@
+<% if @members.present? %>
+
+<table>
+  <thead>
+    <tr>
+      <th>User Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @members.each do |member| %>
+    <% if member == current_member %>
+      <tr>
+        <td><h2><%= member.username %> (me)<h2> </td>
+      </tr>
+    <% else %>
+      <tr>
+        <td><h2><%= member.username %><h2></td>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<% else %>
+
+<h3>No Friends</h3>
+<% end %>
