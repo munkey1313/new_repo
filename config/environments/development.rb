@@ -30,17 +30,17 @@ FantasyImmortals::Application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = 
   {
-<<<<<<< HEAD
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'gmail.com',
-    user_name:            'email',
-    password:             'password',
+    user_name:            'fantastyimmortals@gmail.com',
+    password:             'House111',
     authentication:       'plain',
     enable_starttls_auto: true  
-=======
-    
->>>>>>> 297a78524e8c4301f0e26392bb4c587b6c637aec
   }
+  # config.action_mailer.delivery_method = :sendmail
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.default_options = {from: 'pj@pjvea.com'}
 
 end
