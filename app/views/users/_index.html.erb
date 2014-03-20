@@ -11,12 +11,32 @@
     <% @members.each do |member| %>
     <% if member == current_member %>
       <tr>
+<<<<<<< HEAD
         <td><h2><%= member.username %> (me)<h2> </td>
       </tr>
     <% else %>
       <tr>
         <td><h2><%= member.username %><h2></td>
       </tr>
+=======
+        <td><h2><%= link_to member.username, "../members/#{member.id}" %> (me)<h2> </td>
+        <% if member.image.blank? %>
+        
+        <% else %>
+           <td><%=  image_tag member.image.url(:thumb) %></td>
+        <% end %>
+      </tr>
+    <% else %>
+      <tr>
+        <td><h2><%= link_to member.username, "../members/#{member.id}" %><h2></td>
+        <% if member.image.blank? %>
+
+        <% else %>
+           <td><%=  image_tag member.image.url(:thumb) %></td>
+        <% end %>
+      </tr>
+      
+>>>>>>> dd1cb583bfffd5a25daa3938e4d570636e9c5327
     <% end %>
     <% end %>
   </tbody>
@@ -25,4 +45,8 @@
 <% else %>
 
 <h3>No Friends</h3>
+<<<<<<< HEAD
 <% end %>
+=======
+<% end %>
+>>>>>>> dd1cb583bfffd5a25daa3938e4d570636e9c5327

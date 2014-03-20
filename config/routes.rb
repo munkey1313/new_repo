@@ -8,6 +8,10 @@ FantasyImmortals::Application.routes.draw do
   get '/contact ' => "pages#contact"
   get '/dashboard' => "pages#dashboard"
   get '/members', :to => "users#index"
+<<<<<<< HEAD
+=======
+  get '/members/:id', :to => "users#show", :as => :member
+>>>>>>> dd1cb583bfffd5a25daa3938e4d570636e9c5327
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

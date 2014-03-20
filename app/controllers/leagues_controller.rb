@@ -29,7 +29,11 @@ class LeaguesController < ApplicationController
     @league = current_member.leagues.build(league_params)
     respond_to do |format|
       if @league.save
+<<<<<<< HEAD
         #LeagueMailer.league_mailer(@league).deliver
+=======
+        LeagueMailer.league_mailer(@league).deliver
+>>>>>>> dd1cb583bfffd5a25daa3938e4d570636e9c5327
         format.html { redirect_to dashboard_url, notice: 'League was successfully created.' }
         format.json { render action: 'show', status: :created, location: @league }
       else
