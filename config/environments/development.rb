@@ -33,13 +33,10 @@ FantasyImmortals::Application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'gmail.com',
-<<<<<<< HEAD
-    user_name:            'email',
-    password:             'password',
-=======
+
     user_name:            'fantastyimmortals@gmail.com',
     password:             'House111',
->>>>>>> dd1cb583bfffd5a25daa3938e4d570636e9c5327
+
     authentication:       'plain',
     enable_starttls_auto: true  
   }
