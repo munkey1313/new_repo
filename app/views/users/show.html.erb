@@ -8,6 +8,10 @@
       </div>
       <div class="panel-body">
         <p><%= @member.name %></p>
+        <%= render 'follow_form' if signed_in? %>
+      </div>
+      <div>
+        <%= render 'shared/stats' %>
       </div>
     </div>
   </div>

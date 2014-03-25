@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140306011535) do
+ActiveRecord::Schema.define(version: 20140324234115) do
 
   create_table "installs", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -64,5 +64,12 @@ ActiveRecord::Schema.define(version: 20140306011535) do
 
   add_index "members", ["email"], name: "index_members_on_email", unique: true
   add_index "members", ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
+
+  create_table "relationships", force: true do |t|
+    t.integer  "follower_id"
+    t.integer  "followed_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
