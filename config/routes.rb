@@ -1,9 +1,8 @@
 FantasyImmortals::Application.routes.draw do
   get "dashboard/show"
   resources :leagues
-  resources :sessions,      only: [:new, :create, :destroy]
-  resources :relationships, only: [:create, :destroy]
-  devise_for :members, :controllers => {:user_controller => "user_controller" }
+  resources :relationships
+  devise_for :members, :controllers => { :user_controller => "user_controller" }
   resources :users do
     member do
       get :following, :followers

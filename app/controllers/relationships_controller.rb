@@ -5,6 +5,7 @@ class RelationshipsController < ApplicationController
     @member = Member.find(params[:relationship][:followed_id])
     current_member.follow!(@member)
     redirect_to members_path(@member.name)
+    FriendMailer.friend_mailer(@member).deliver
   end
 
   def destroy
