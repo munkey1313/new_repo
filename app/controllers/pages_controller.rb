@@ -4,7 +4,7 @@ class PagesController < ApplicationController
 			redirect_to '/dashboard/'
 		end
   	end
-
+  	# This is the controller method that feeds data to use on the dashboard
   	def dashboard
   		@leagues = League.all
   		@members = Member.all
