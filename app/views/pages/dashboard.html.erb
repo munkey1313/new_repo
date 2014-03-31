@@ -1,41 +1,27 @@
+  <body>
 
-<body>
-<div id="dashCont" class="container">
-	<div class="row">		
-		<div class="col-sm-9">
-			<div id="dashMain" class="container">
-				<div class="row">
-					<div class="col-sm-3">			
-					</div>
-					<div class="col-sm-3">
-						<br>
-						<button type="button" id="dashBtn" class="btn btn-default btn-lg"><a href="/leagues/new">NEW LEAGUE</a></button>
-					</div>
-					<div class="col-sm-3">
-						<br>
-						<button type="button" id="dashBtn" class="btn btn-default btn-lg">JOIN LEAGUE</button>
-						
-					</div>
-					<div class="col-sm-3">
-						<br>
-						<button type="button" id="dashBtn" class="btn btn-default btn-lg"><a href="/leagues">EDIT LEAGUES</a></button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="dashFriend" class="col-sm-3">
-			<h1>Friends List</h1>
-		</div>
-	</div>
-	<div class="row">		
-		
-<div class="col-sm-9">
-			<div id="dashMain" class="container">
-					<div class="row">
-						<div class="col-sm-6">
-							<div class = "row">
-								<div class="col-sm-6">
-									<br><br>
+          <!-- Main jumbotron for a primary marketing message or call to action -->
+          <div class="jumbotron">
+              <div class="row"> 
+
+
+                <div class="container-fluid">
+
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">New League</a></li>
+            <li><a href="#">Join League</a></li>
+            <li><a href="#">Leaderboard</a></li>
+            <li><a href="#">Add Funds</a></li>
+            <li><a href="#">View Leagues</a></li>
+          </ul>
+          </div></div>
+
+
+
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div>
                                   <% @members.each do |member| %>
                                       <% if member == current_member %>
                                           <% if member.image.blank? %>
@@ -45,36 +31,35 @@
                                           <% end %>
                                       <% end %>
                                   <% end %>
-							    	<button type="button" id="dashBtn" class="btn btn-default btn-lg"><a href="/members/edit">EDIT PICTURE</a></button>						
-							    </div>
-							    <div class="col-sm-6">							    	
-							    		
-							    </div>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<h1>Advertisement</h1>
-							<span class="glyphicon glyphicon-th-large"></span>
-						</div>
-					</div>
-				<h3 class="pull-left">CURRENT LEAGUES IN SESSION</h3>
-				<div class="row">
-					<div class="col-sm-11">
-						<div id="dashScroll" class="container">
-							<%= render '/leagues/index' %>
-						</div>
-					</div>
-					<div class="col-sm-1">
-					</div>
-				</div>
-				<br>
-				<button type="button" id="dashBtn" class="btn btn-default btn-lg pull-left">UPGRADE</button>
-				<button type="button" id="dashBtn" class="btn btn-default btn-lg pull-left">OPTIONS</button>
-			</div>
-		</div>
-		<div id="dashFriend" class="col-sm-3">
-			<%= render '/users/index' %>
-		</div>
-	</div>
-</div>
-</body>
+                    <button type="button" id="dashBtn" class="btn btn-default btn-lg"><a href="/members/edit">EDIT PICTURE</a></button>    
+                    </div>
+              
+              <div>
+              <ul>
+                <li>Name</li>
+                <li>ScoreCard</li>
+                <li>Funds</li>
+              </ul>
+              </div>
+
+                  </div>
+                  </div>
+
+
+                    <div class="col-sm-3">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <center><h2>Friends List</h2></center>
+                      </div>
+                        <div class="body">
+                    <%= render '/users/index' %>
+                  </div>
+                    <%= render '/shared/stats' %>       
+                  </div>
+                </div>
+
+
+          </div>
+
+        </div>
+      </body>
