@@ -1,15 +1,20 @@
 FantasyImmortals::Application.routes.draw do
   get "dashboard/show"
   resources :leagues
-
-  devise_for :members, :controllers => {:user_controller => "user_controller" }
+  resources :relationships
+  devise_for :members, :controllers => { :user_controller => "user_controller" }
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   root "pages#home"
   get '/learn ' => "pages#learn"
   get '/contact ' => "pages#contact"
   get '/dashboard' => "pages#dashboard"
   get '/members', :to => "users#index"
 
-  get '/members/:id', :to => "users#show", :as => :member
+  get '/members/:id', :to => "users#show"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

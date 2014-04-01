@@ -7,5 +7,4 @@ class LeagueMailer < ActionMailer::Base
     @url  = 'http://162.144.84.38'
 	    mail(to: @member.email, subject: 'Im on a boat')
   end
-  # LeagueMailer.welcome_email(:member).deliver
 end
