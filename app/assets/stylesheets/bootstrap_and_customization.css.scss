@@ -1,1 +1,25 @@
 @import 'bootstrap';
+
+body {
+	padding-top: 90px;
+	font-family: 'Andalus';
+	padding-bottom: 60px;
+	background: radial-gradient(#F0F0F0, black);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.jumbotron{
+	background: radial-gradient(green, #F0F0F0);
+}
+
+.hometitle {
+	font-family: 'Andalus';
+}
+
+.homesubtitle{
+	font-family: 'Comic Sans MS';
+}
+
+
+
