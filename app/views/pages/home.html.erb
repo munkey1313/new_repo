@@ -1,33 +1,42 @@
+<!DOCTYPE html>
 
+<!--Home Page, basic page a user will view when going to our web page-->
 <html>
-
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 
 
-<body>
 
+
+
+
+<body>
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
 
+    <div class="row"> <!--row to keep everything in line for the title and sign-up button-->
+      <div class="col-sm-8">
+        <!--Page Title and subtitle-->
+        <CENTER><H1 class="hometitle">Fantasy Immortals</H1></CENTER>
+        <CENTER><h2 class="homesubtitle">Fantasy Sports with all your favorites of the past!</br></h2></CENTER>
+      </div>  
 
-    <div class="row"> 
-
-    <div class="col-sm-8">
-    <!--Page Title-->
-    <CENTER><H1 class="hometitle">Fantasy Immortals</H1></CENTER>
-    <CENTER><h2 class="homesubtitle">Fantasy Sports with all your favorites of the past!</br></h2></CENTER>
-  </div>  
-
-    <div class="col-sm-3">
-      <a class="btn btn-lg btn-warning" href="/members/sign_up"><h2>Play Now</h2>Free and paid games available</a>
-    </div>
-
+      <!--button to register for the site-->
+      <div class="col-sm-3">
+        <a class="btn btn-lg btn-warning" href="/members/sign_up"><h2>Play Now</h2>Free and paid games available</a>
+      </div>
     </div> <!--end title row-->
 
-    <div class="row"> <!--Row carousels-->
-      <div class="col-sm-5">
+
+
+
+
+
+
+    <!-- This row tag keep the carasel in line together. -->
+    <div class="row"> 
+      <div class="col-sm-5"><!--Panel for carousel 1, title and 3 pictures-->
         <div class="panel panel-default">
           <div class="panel-heading">
             <CENTER><h3 class="panel-title">OLD SCHOOL</h3></CENTER>
@@ -58,11 +67,11 @@
           </div><!-- END /.col-sm-4 -->
 
 
-          <div class="col-sm-2">
+          <div class="col-sm-2"><!--Displays the VS element-->
             <CENTER><H3>VS</H3></CENTER>
           </div>
 
-          <div class="col-sm-5"><!--Panel-->
+          <div class="col-sm-5"><!--Panel for carousel 2, title and 3 pictures-->
             <div class="panel panel-success">
               <div class="panel-heading">
                 <CENTER><h3 class="panel-title">NEW SCHOOL</h3></CENTER>
@@ -97,81 +106,89 @@
 
 
 
+            <!--information button row -->
+            <div>
+                <center><p>
+                 <a id="toggle-panel-1" class="btn btn-lg btn-warning">What is Fantasy Immortals</a>
+                 <a href="#" id="toggle-panel-2" class="btn btn-lg btn-warning">How To Play</a>       
+                 <a href="#" id="toggle-panel-3" class="btn btn-lg btn-warning">Who Do You Play</a>
+               </p></center>
+             </nav>
+           </div> <!--ENd buttons row -->
 
 
-            <div> <!--information button row -->
-              <center><p>
-       <a class="btn btn-lg btn-default" onclick="demoDisplay()" href="#" id="toggle-panel-1" class="button primary is-active">What is Fantasy Immortals</a>
-       <a class="btn btn-lg btn-default" href="#" id="object.style.display=panel one" class="button primary">How To Play</a>       
-       <a class="btn btn-lg btn-default" href="/members/sign_up">Who Do You Play</a>
-      </p></center>
-            </div> <!--ENd buttons row -->
+           <!--information displayed button 1 -->
+           <div class="panel one" id="toggle-panel-1" style="display:none;">
+            <h2>One-Week Fantasy Football Leagues for Real Money</h2>
+            <div class="column-7">
+              <ul>
+                <li>Salary cap format: you get to pick exactly who you want</li>
+                <li>Play directly against other users for real money</li>
+                <li>Over 15,000 one-week leagues run weekly in all different sizes</li>
+                <li>No season-long commitment - you only play when you want</li>
+                <li>We're huge - over $4 million paid out to winners every single week</li>
+
+              </ul>
+            </div>
+          </div>
+
+          <!--information displayed button 2-->
+          <div class="panel two" id="toggle-panel-2" style="display:none;">
+            <h2>How To Play</h2>
+            <div class="column-7">
+              <h5>1. Join a one-week league for real money</h5>
+              <p>League winners get paid immediately. And then a whole new season starts the very next day.</p>
+              <h5>2. Pick your fantasy team in minutes</h5>
+              <p>Pick the guys who you think will put up the highest point totals in that week's games.</p>
+              <h5>3. No season-long commitment, no subscription fees</h5>
+              <p>There's no obligation to play every week. Play on your own terms.</p>
+              <p>
+                <b><small></small></b><br>
+                <small><p><b>How your team will score points:</b><br /><small>It's just like season-long fantasy football - your players earn fantasy points for the stats they put up in a game.</small></p></small>
+              </p>
+            </div>
+          </div>
+
+          <!--information displayed button 3 -->
+          <div class="panel three" id="toggle-panel-3" style="display:none;">
+            <h2>Who Do You Play?</h2>
+            <div class="column-7">
+              <h5>Play right away vs. other people</h5>
+              <p>Our contest lobby has over 15,000 leagues every week of the 2013 football season, so you can an open league within seconds. Join one, pick your team, and you’re in. Late scratches? No problem. You can change your lineup anytime before games start. League sizes range from 2 to 10,000+ teams, with entry fees from $1 to $535 and tons of payout structures. Most of our leagues have more than one winner. Some of them even pay out cash to the top half of finishers!</p>
+              <h5>Or, form private leagues with friends</h5>
+              <p>Play with your friends by forming a private league. You get to choose your league size, entry fee, and payout distribution.</p>
+            </div>
+          </div>
 
 
 
-            <div class="panel one" id="panel one" style="display:none;">
-      <h1>One-Week Fantasy Football Leagues for Real Money</h1>
-      <div class="column-7">
-        <ul>
-            <li>Salary cap format: you get to pick exactly who you want</li>
-            <li>Play directly against other users for real money</li>
-            <li>Over 15,000 one-week leagues run weekly in all different sizes</li>
-            <li>No season-long commitment - you only play when you want</li>
-            <li>We're huge - over $4 million paid out to winners every single week</li>
-          
-        </ul>
-      </div>
-    </div>
+          <!--Code to run the carousel pictures on the home page-->
+          <script>
+          $('#myCarousel').carousel
+          ({interval: 2500,})
+          $('#myCarousel2').carousel
+          ({interval: 2500,})
+
+          </script>          
 
 
-    <div class="panel two" style="display:none;">
-      <h1>How To Play</h1>
-      <div class="column-7">
-        <h5>1. Join a one-week league for real money</h5>
-        <p>League winners get paid immediately. And then a whole new season starts the very next day.</p>
-        <h5>2. Pick your fantasy team in minutes</h5>
-        <p>Pick the guys who you think will put up the highest point totals in that week's games.</p>
-        <h5>3. No season-long commitment, no subscription fees</h5>
-        <p>There's no obligation to play every week. Play on your own terms.</p>
-        <p>
-          <b><small></small></b><br>
-          <small><p><b>How your team will score points:</b><br /><small>It's just like season-long fantasy football - your players earn fantasy points for the stats they put up in a game.</small></p></small>
-        </p>
-      </div>
-    </div>
 
 
-    <div class="panel three" style="display:none;">
-      <h1>Who Do You Play?</h1>
-      <div class="column-7">
-        <h5>Play right away vs. other people</h5>
-        <p>Our contest lobby has over 15,000 leagues every week of the 2013 football season, so you can an open league within seconds. Join one, pick your team, and you’re in. Late scratches? No problem. You can change your lineup anytime before games start. League sizes range from 2 to 10,000+ teams, with entry fees from $1 to $535 and tons of payout structures. Most of our leagues have more than one winner. Some of them even pay out cash to the top half of finishers!</p>
-        <h5>Or, form private leagues with friends</h5>
-        <p>Play with your friends by forming a private league. You get to choose your league size, entry fee, and payout distribution.</p>
-      </div>
-    </div>
+          <!--code to run the 3 buttons in the bottom of the home page, to display basic information about the site.. Not working yet!!!-->
+  <script>
+  $(document).ready(function() {
+    $('a#toggle-panel-1').click(function(){
+      $('a#toggle-panel-1').addClass('is-active'), $('a#toggle-panel-2').removeClass('is-active'), $('a#toggle-panel-3').removeClass('is-active'), $('div.panel.one').show(), $('div.panel.two,div.panel.three').hide();
+    });
+    $('a#toggle-panel-2').click(function(){
+      $('a#toggle-panel-2').addClass('is-active'), $('a#toggle-panel-1').removeClass('is-active'), $('a#toggle-panel-3').removeClass('is-active'), $('div.panel.two').show(), $('div.panel.one,div.panel.three').hide();
+    });
+    $('a#toggle-panel-3').click(function(){
+      $('a#toggle-panel-3').addClass('is-active'), $('a#toggle-panel-1').removeClass('is-active'), $('a#toggle-panel-2').removeClass('is-active'), $('div.panel.three').show(), $('div.panel.one,div.panel.two').hide();
+    });
+  });
+  </script>
 
+        </body>
 
-            
-            
-      <script>
-    $('#myCarousel').carousel
-    ({
-        interval: 2500,
-
-
-        })
-    $('#myCarousel2').carousel
-    ({
-        interval: 2500,
-
-
-        })
-
-    </script>          
-            
-       
-
-          </body>
-
-</html>
+        </html>

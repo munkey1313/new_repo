@@ -3,8 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-	min-width: 800px;
-	padding-top: 5%;
+	min-width: 1000px;
+	padding-top: 10% auto;
 	font-family: 'Andalus';
 	padding-bottom: 5%;
 	background: radial-gradient(#F0F0F0, black);
@@ -18,3 +18,8 @@ body {
 
 .hometitle{font-family: 'Andalus';}
 .homesubtitle{font-family: 'Comic Sans MS';}
+
+#dash_user{
+	padding-left: 4%;
+
+}
