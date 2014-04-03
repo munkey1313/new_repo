@@ -27,14 +27,10 @@
               <div class="row">
                 
                 <div><!--displays members picture, dashboard-->
-                  <% @members.each do |member| %>
-                  <% if member == current_member %>
-                  <% if member.image.blank? %>
+                  <% if @current_member.image.blank? %>
 
                   <% else %>
-                  <td><%=  image_tag member.image.url(:medium) %></td>
-                  <% end %>
-                  <% end %>
+                  <td><%=  image_tag @current_member.image.url(:medium) %></td>
                   <% end %></br><!--picture end-->
 
                   <!--buttons under users picture, dashboard-->
@@ -47,7 +43,7 @@
 
             <div id ="dash_user" class="col-sm-3"><!--User Info, dashboard-->
               <ul>
-                <li>UserName</li>
+                <li><%= @current_member.username %></li>
                 <li>ScoreCard</li>
                 <li>Funds</li>
               </ul>
