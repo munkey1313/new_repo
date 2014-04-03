@@ -13,6 +13,15 @@
 
 ActiveRecord::Schema.define(version: 20140324234115) do
 
+  create_table "friends", force: true do |t|
+    t.integer  "member_id"
+    t.integer  "friend_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "friends", ["member_id", "friend_id"], name: "index_friends_on_member_id_and_friend_id"
+
   create_table "installs", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -39,6 +48,15 @@ ActiveRecord::Schema.define(version: 20140324234115) do
   end
 
   add_index "leagues", ["member_id"], name: "index_leagues_on_member_id"
+
+  create_table "member_friendships", force: true do |t|
+    t.integer  "member_id"
+    t.integer  "friend_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "member_friendships", ["member_id", "friend_id"], name: "index_member_friendships_on_member_id_and_friend_id"
 
   create_table "members", force: true do |t|
     t.string   "email",                  default: "", null: false

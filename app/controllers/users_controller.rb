@@ -15,6 +15,7 @@ class UsersController < ApplicationController
       format.html # show.html.erb
       format.xml  { render :xml => @member }
     end
+
   end
 
   def following
