@@ -12,10 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :placeholder => "Name" %>
   </div>
+  <br />
   <div class="actions">
     <%= f.submit %>
   </div>
+  <br />
 <% end %>

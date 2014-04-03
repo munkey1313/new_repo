@@ -1,65 +1,73 @@
-  <body>
+    <!--Dashboard Page-->
 
-          <!-- Main jumbotron for a primary marketing message or call to action -->
-          <div class="jumbotron">
-              <div class="row"> 
-
-
-                <div class="container-fluid">
-
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">New League</a></li>
-            <li><a href="#">Join League</a></li>
-            <li><a href="#">Leaderboard</a></li>
-            <li><a href="#">Add Funds</a></li>
-            <li><a href="#">View Leagues</a></li>
-          </ul>
-          </div></div>
+    <p id="notice"><%= notice %></p>
+    <body>
 
 
 
-                <div class="col-sm-6">
-                  <div class="row">
-                    <div>
-                                  <% @members.each do |member| %>
-                                      <% if member == current_member %>
-                                          <% if member.image.blank? %>
+      <!-- navagation buttons in the dashboard -->
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="/leagues/new">Create League</a></li>
+        <li><a href="/leagues">View Leagues</a></li>
+        <li><a href="#">Leaderboard</a></li>
+        <li><a href="#">Add Funds</a></li>
+        <li><a href="/members">View Friends</a></li>
+      </ul>
 
-                                          <% else %>
-                                              <td><%=  image_tag member.image.url(:medium) %></td>
-                                          <% end %>
-                                      <% end %>
-                                  <% end %>
-                    <button type="button" id="dashBtn" class="btn btn-default btn-lg"><a href="/members/edit">EDIT PICTURE</a></button>    
-                    </div>
-              
-              <div>
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="row"> 
+        <div class="jumbotron">
+          <div class="row"> 
+
+
+
+            <div class="col-sm-2"><!--user section-->
+              <div class="row">
+                
+                <div><!--displays members picture, dashboard-->
+                  <% if @current_member.image.blank? %>
+
+                  <% else %>
+                  <td><%=  image_tag @current_member.image.url(:medium) %></td>
+                  <% end %></br><!--picture end-->
+
+                  <!--buttons under users picture, dashboard-->
+                  <a class="btn btn-lg btn-default" href="/members/edit">EDIT PICTURE AND PROFILE</a>  
+                </div>
+              </div>
+            </div><!--end user section-->
+
+
+
+            <div id ="dash_user" class="col-sm-3"><!--User Info, dashboard-->
               <ul>
-                <li>Name</li>
+                <li><%= @current_member.username %></li>
                 <li>ScoreCard</li>
                 <li>Funds</li>
               </ul>
-              </div>
-
-                  </div>
-                  </div>
+            </div><!--end User Info, dashboard-->
 
 
-                    <div class="col-sm-3">
-                    <div class="panel panel-default">
-                      <div class="panel-heading">
-                          <center><h2>Friends List</h2></center>
-                      </div>
-                        <div class="body">
-                    <%= render '/users/index' %>
-                  </div>
-                    <%= render '/shared/stats' %>       
-                  </div>
+            <div class="col-sm-3">
+            </div>
+
+
+            <div class="col-sm-3"><!--friend panel, dashboard-->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <center><h2>Friends List</h2></center>
                 </div>
+                <div class="body">
+                  <%= render '/users/index' %>
+                </div>
+                <%= render '/shared/stats' %>       
+              </div>
+            </div><!--end panel-->
 
 
           </div>
-
         </div>
-      </body>
+      </row>
+    </body>
