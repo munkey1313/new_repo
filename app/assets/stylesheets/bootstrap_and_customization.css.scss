@@ -4,9 +4,8 @@ body {
 	padding-top: 90px;
 	font-family: 'Andalus';
 	padding-bottom: 60px;
-	background: radial-gradient(#F0F0F0, black);
-	background-size: cover;
-	background-repeat: no-repeat;
+	background: black;
+	color:white;
 }
 
 #changeText {
@@ -19,3 +18,8 @@ body {
 
 .hometitle{font-family: 'Andalus';}
 .homesubtitle{font-family: 'Comic Sans MS';}
+
+.container 
+{
+	width: 1060px;
+}
