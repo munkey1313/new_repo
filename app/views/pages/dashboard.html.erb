@@ -39,8 +39,6 @@
               </div>
             </div><!--end user section-->
 
-
-
             <div id ="dash_user" class="col-sm-3"><!--User Info, dashboard-->
               <ul>
                 <li><%= @current_member.username %></li>
@@ -57,6 +55,10 @@
             <div class="col-sm-3"><!--friend panel, dashboard-->
               <div class="panel panel-default">
                 <div class="panel-heading">
+                  <%= form_tag(members_path, :method => "get", id: "search-form") do %>
+                    <%= text_field_tag :search, params[:search], placeholder: "Search Members", :class => "form-control" %>
+                    <%= submit_tag "Search", :name => nil, :class => "btn btn-primary"%>
+                  <% end %>
                   <center><h2>Friends List</h2></center>
                 </div>
                 <div class="body">

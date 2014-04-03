@@ -7,7 +7,15 @@ class UsersController < ApplicationController
 
   def index
   	@members = Member.all
+
+    if params[:search]
+      @members = Member.search(params[:search]).order("created_at DESC")
+    else
+      @members = Member.all.order('created_at DESC')
+    end
+    
   end
+
   def show
     @member = Member.find(params[:id])
 

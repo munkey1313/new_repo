@@ -24,4 +24,8 @@ class Member < ActiveRecord::Base
     relationships.find_by(followed_id: other_member.id).destroy
   end
 
+  def self.search(query)
+    where("email like ?", "%#{query}%") 
+  end
+
 end
