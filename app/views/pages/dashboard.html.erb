@@ -5,48 +5,67 @@
 
 
 
-      <!-- navagation buttons in the dashboard -->
-      <ul class="nav nav-pills">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="/leagues/new">Create League</a></li>
-        <li><a href="/leagues">View Leagues</a></li>
-        <li><a href="#">Leaderboard</a></li>
-        <li><a href="#">Add Funds</a></li>
-        <li><a href="/members">View Friends</a></li>
-      </ul>
-
-
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="row"> 
-        <div class="jumbotron">
           <div class="row"> 
 
 
 
-            <div class="col-sm-2"><!--user section-->
-              <div class="row">
-                
-                <div><!--displays members picture, dashboard-->
+            <div class="col-sm-3"><!--friend panel, dashboard-->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <center><a button class="btn btn-mini btn-warning" href="/members"><%= @current_member.username %> Profile</a></button></center>
+                </div>
+                <div class="body";>
+                 <!--displays members picture, dashboard-->
                   <% if @current_member.image.blank? %>
 
                   <% else %>
+
+                  
+                  <center><td><%=  image_tag(@current_member.image.url(:thumb)) %></td></center>
+                  <% end %></br><!--picture end-->
+                  <%= render '/shared/stats' %>    
+                   
+              </div>
+            </div><!--end panel-->
+          </div><!--end column-->
+
+            
+
                   <td><%=  image_tag @current_member.image.url(:medium) %></td>
                   <% end %>
                   </br><!--picture end-->
 
-                  <!--buttons under users picture, dashboard-->
-                  <a class="btn btn-lg btn-default" href="/members/edit">EDIT PICTURE AND PROFILE</a>  
-                </div>
-              </div>
-            </div><!--end user section-->
 
-            <div id ="dash_user" class="col-sm-3"><!--User Info, dashboard-->
-              <ul>
-                <li><%= @current_member.username %></li>
-                <li>ScoreCard</li>
-                <li>Funds</li>
-              </ul>
-            </div><!--end User Info, dashboard-->
+          <div class="col-sm-3"><!--friend panel, dashboard-->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <center><a button class="btn btn-mini btn-warning" href="/members"> Leagues </a></button></center>
+                </div>
+                <div class="body">
+            <div id="dashScroll" class="container">
+              <%= render '/leagues/index' %>
+            </div>
+           </div>        
+            </div><!--end panel-->
+          </div><!--end column-->
+
+
+          <div class="col-sm-3"><!--friend panel, dashboard-->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <center><a button class="btn btn-mini btn-warning" href="/members"> Friends </a></button></center>
+                </div>
+                <div class="body">
+            <div id="dashScroll" class="container">
+              <%= render '/users/index' %>
+            </div>
+           </div>        
+            </div><!--end panel-->
+          </div><!--end column-->
+
+
 
 
             <div class="col-sm-3">
@@ -71,6 +90,6 @@
 
 
           </div>
-        </div>
+
       </row>
     </body>
