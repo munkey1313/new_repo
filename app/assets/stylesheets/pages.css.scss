@@ -8,17 +8,34 @@ body {
 	padding-top: 10% auto;
 	font-family: 'Andalus';
 	padding-bottom: 5%;
+
 	background: #FCFCFC;
+
+	background: darkgrey;
+
 
 }
 
 .jumbotron{
-	background: radial-gradient(green, #F0F0F0);
+	background: radial-gradient(whitesmoke, #F0F0F0);
 }
 
-.hometitle{font-family: 'Andalus';}
-.homesubtitle{font-family: 'Comic Sans MS';}
+.hometitle{
+  font-family: 'Andalus';
+  color: #000000;
+}
+.homesubtitle{
+  font-family: 'Andalus';
+  color: #000000;
+}
 
+.btn {
+  color: #000000;
+  background: darkgrey;
+  border: darkgrey;
+  &:hover { background-color: dimgrey }
+
+}
 #dash_user{
 	padding-left: 4%;
 

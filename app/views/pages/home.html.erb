@@ -169,21 +169,21 @@
 
 
 
-          <!--code to run the 3 buttons in the bottom of the home page, to display basic information about the site.. Not working yet!!!-->
+          <!--code to run the 3 buttons in the bottom of the home page, to display basic information about the site-->
   <script>
   $(document).ready(function() {
     $('a#toggle-panel-1').click(function(){
-      $('a#toggle-panel-1').addClass('is-active'), $('a#toggle-panel-2').removeClass('is-active'), $('a#toggle-panel-3').removeClass('is-active'), $('div.panel.one').show(), $('div.panel.two,div.panel.three').hide();
+      $('a#toggle-panel-1').addClass('is-active'), $('a#toggle-panel-2').removeClass('is-active'), $('a#toggle-panel-3').removeClass('is-active'), $('div.panel.one').slideDown().show(), $('div.panel.two,div.panel.three').slideUp();
     });
     $('a#toggle-panel-2').click(function(){
-      $('a#toggle-panel-2').addClass('is-active'), $('a#toggle-panel-1').removeClass('is-active'), $('a#toggle-panel-3').removeClass('is-active'), $('div.panel.two').show(), $('div.panel.one,div.panel.three').hide();
+      $('a#toggle-panel-2').addClass('is-active'), $('a#toggle-panel-1').removeClass('is-active'), $('a#toggle-panel-3').removeClass('is-active'), $('div.panel.two').slideDown().show(), $('div.panel.one,div.panel.three').slideUp();
     });
     $('a#toggle-panel-3').click(function(){
-      $('a#toggle-panel-3').addClass('is-active'), $('a#toggle-panel-1').removeClass('is-active'), $('a#toggle-panel-2').removeClass('is-active'), $('div.panel.three').show(), $('div.panel.one,div.panel.two').hide();
+      $('a#toggle-panel-3').addClass('is-active'), $('a#toggle-panel-1').removeClass('is-active'), $('a#toggle-panel-2').removeClass('is-active'), $('div.panel.three').slideDown().show(), $('div.panel.one,div.panel.two').slideUp();
     });
   });
   </script>
 
-        </body>
+</body>
 
-        </html>
+</html>
