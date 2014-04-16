@@ -7,7 +7,7 @@
       <div style="text-align:center;"><img src="http://edpov.stanford.edu/sites/default/files/defaultUserIcon.png"></div>
       <br />
     <% else %>
-      <div style="text-align:center;"><%=  image_tag @member.image.url(:medium) %></div>
+      <div style="text-align:center;"><%= image_tag(@member.image.url(:medium)) %></div>
     <% end %>
 
   <div class="form-group">
