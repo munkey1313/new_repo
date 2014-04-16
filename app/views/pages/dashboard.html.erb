@@ -30,7 +30,7 @@
                   <% if @current_member.image.blank? %>
 
                   <% else %>
-                  <td><%=  image_tag @current_member.image.url(:medium) %></td>
+                  <td><%=  image_tag @current_member.image.url(:medium), :class => "style_image" %></td>
                   <% end %>
                   </br><!--picture end-->
 
