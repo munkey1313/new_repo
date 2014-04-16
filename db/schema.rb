@@ -13,15 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140324234115) do
 
-  create_table "friends", force: true do |t|
-    t.integer  "member_id"
-    t.integer  "friend_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "friends", ["member_id", "friend_id"], name: "index_friends_on_member_id_and_friend_id"
-
   create_table "installs", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
