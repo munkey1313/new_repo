@@ -25,6 +25,30 @@ body {
   background-color: #ffffff;
 }
 
+<<<<<<< HEAD
 .navbar.container.li.a  {
   &:hover{background-color: dimgrey;}
+=======
+.style_image 
+{
+  	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+}
+
+.style_image_small 
+{
+  	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+}
+
+.center
+{
+	text-align: center;
+>>>>>>> 9f86af673b2d77fb12b0e0c0af2d0f14c053b6e5
 }

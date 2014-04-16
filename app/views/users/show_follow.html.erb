@@ -1,18 +1,24 @@
-<% provide(:title, @title) %>
-<div class="row">
-  <aside class="span4">
-    <section>
-      <h1><%= @member.name %></h1>
-    </section>
-    <section>
-      <%= render 'shared/stats' %>
-    </section>
-    <% if @members.any? %>
-      <ul class="users">
-        <% @members.each do |user| %>
-            <%= image_tag user.image.url(:medium) %>
-          <% end %>
-      </ul>
-    <% end %>
-  </aside>
+<div class="center">
+  <%= render 'shared/stats' %>
 </div>
+<br />
+<div class="row center">
+  <div class="col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+      <% if @members.any? %>
+        <ul class="users">
+          <% @members.each do |user| %>
+              <div class="panel-heading">
+                <%= image_tag user.image.url(:medium), :class => "style_image" %>
+              </div>
+              <div class="panel-body">
+                <h2><%= link_to user.name, user_path(user.id) %><h2>
+                <%= render 'follow_form' if signed_in? %>
+              </div>
+            <% end %>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
+<br />
