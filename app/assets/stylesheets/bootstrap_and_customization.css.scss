@@ -1,11 +1,11 @@
 @import 'bootstrap';
 
 body {
-	padding-top: 90px;
+	padding-top: 120px;
 	font-family: 'Andalus';
 	padding-bottom: 60px;
 	background: white;
-	color:white;
+	color:#000000;
 }
 
 
@@ -23,4 +23,8 @@ body {
 }
 .navbar {
   background-color: #ffffff;
+}
+
+.navbar.container.li.a  {
+  &:hover{background-color: dimgrey;}
 }

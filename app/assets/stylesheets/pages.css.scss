@@ -9,8 +9,6 @@ body {
 	font-family: 'Andalus';
 	padding-bottom: 5%;
 
-	background: #FCFCFC;
-
 	background: darkgrey;
 
 
@@ -33,7 +31,7 @@ body {
   color: #000000;
   background: darkgrey;
   border: darkgrey;
-  &:hover { background-color: dimgrey }
+  &:hover { background-color: dimgrey; }
 
 }
 #dash_user{
