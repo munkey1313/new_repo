@@ -45,6 +45,18 @@ body {
 
 .panel {
 	.body{
-		
+		height:200px;
 	}
 }
+
+
+	A:link {
+ COLOR: black; /*The color of the link*/
+}
+A:visited {
+ COLOR: red; /*The color of the visited link*/
+}
+A:hover {
+ COLOR: red; /*The color of the mouseover or 'hover' link*/
+}
+

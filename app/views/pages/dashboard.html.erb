@@ -6,6 +6,7 @@
 
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="container-dash">
       <div class="row"> 
           <div class="row"> 
 
@@ -14,9 +15,9 @@
             <div class="col-sm-3"><!--friend panel, dashboard-->
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <center><a button class="btn btn-mini btn-warning" href="/members"><%= @current_member.username %> Profile</a></button></center>
+                  <center><h3><%= @current_member.username %> Profile</h3></center>
                 </div>
-                <div class="body";>
+                <div class="body"; >
                  <!--displays members picture, dashboard-->
                   <% if @current_member.image.blank? %>
 
@@ -30,10 +31,11 @@
           </div><!--end column-->
 
 
+
           <div class="col-sm-3"><!--friend panel, dashboard-->
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <center><a button class="btn btn-mini btn-warning" href="/members"> Leagues </a></button></center>
+                  <center><h3>Leagues</h3></center>
                 </div>
                 <div class="body">
             <div id="dashScroll" class="container">
@@ -47,7 +49,7 @@
           <div class="col-sm-3"><!--friend panel, dashboard-->
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <center><a button class="btn btn-mini btn-warning" href="/members"> Friends </a></button></center>
+                  <center><h3>Friends </h3></center>
                 </div>
                 <div class="body">
             <div id="dashScroll" class="container">
@@ -56,32 +58,39 @@
            </div>        
             </div><!--end panel-->
           </div><!--end column-->
+        </div> <!--end row 1-->
 
 
-
-
-            <div class="col-sm-3">
-            </div>
-
-
-            <div class="col-sm-3"><!--friend panel, dashboard-->
+        <div class="row"> <!--start row 2-->
+        <div class="col-sm-3"><!--friend panel, dashboard-->
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <%= form_tag(members_path, :method => "get", id: "search-form") do %>
-                    <%= text_field_tag :search, params[:search], placeholder: "Search Members", :class => "form-control" %>
-                    <%= submit_tag "Search", :name => nil, :class => "btn btn-primary"%>
-                  <% end %>
-                  <center><h2>Friends List</h2></center>
-                </div>
-                <div class="body">
-                  <%= render '/users/index' %>
-                </div>
-                <%= render '/shared/stats' %>       
-              </div>
+                  <center><a button class="btn btn-mini btn-primary" href="/">Quick Play</a></button></h3></center>
+                </div>      
             </div><!--end panel-->
+          </div><!--end column-->
 
 
-          </div>
 
-      </row>
+          <div class="col-sm-3"><!--friend panel, dashboard-->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <center><a button class="btn btn-mini btn-primary" href="/">Profile History</a></button></h3></center>
+                </div>      
+            </div><!--end panel-->
+          </div><!--end column-->
+
+
+          <div class="col-sm-3"><!--friend panel, dashboard-->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <center><a button class="btn btn-mini btn-primary" href="/">Add Money</a></button></h3></center>
+                </div>      
+            </div><!--end panel-->
+          </div><!--end column-->
+
+        </div> <!--end row 2-->
+
+      </div>
+    </div>
     </body>
