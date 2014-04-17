@@ -49,10 +49,15 @@
           <div class="col-sm-3"><!--friend panel, dashboard-->
               <div class="panel panel-default">
                 <div class="panel-heading">
+
                   <center><h3>Friends </h3></center>
                 </div>
                 <div class="body">
             <div id="dashScroll" class="container">
+              <%= form_tag(members_path, :method => "get", id: "search-form") do %>
+                  <%= text_field_tag :search, params[:search], placeholder: "Search Members", :class => "form-control"  %>
+                  <%= submit_tag "Search", :name => nil, :class => "btn btn-primary"%>
+              <% end %>
               <%= render '/users/index' %>
             </div>
            </div>        
@@ -66,7 +71,7 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <center><a button class="btn btn-mini btn-primary" href="/">Quick Play</a></button></h3></center>
-                </div>      
+                </div>
             </div><!--end panel-->
           </div><!--end column-->
 
