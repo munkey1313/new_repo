@@ -22,9 +22,7 @@
                   <% if @current_member.image.blank? %>
 
                   <% else %>
-
-                  
-                  <center><td><%=  image_tag(@current_member.image.url(:thumb)) %></td></center>
+                  <td><%=  image_tag @current_member.image.url(:medium), :class => "style_image" %></td>
                   <% end %></br><!--picture end-->
                   <%= render '/shared/stats' %>    
                    
@@ -32,7 +30,7 @@
             </div><!--end panel-->
           </div><!--end column-->
 
-            
+
 
           <div class="col-sm-3"><!--friend panel, dashboard-->
               <div class="panel panel-default">

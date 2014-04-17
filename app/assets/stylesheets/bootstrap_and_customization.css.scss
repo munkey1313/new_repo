@@ -1,11 +1,11 @@
 @import 'bootstrap';
 
 body {
-	padding-top: 90px;
+	padding-top: 120px;
 	font-family: 'Andalus';
 	padding-bottom: 60px;
 	background: white;
-	color:black;
+	color:#000000;
 }
 
 
@@ -33,4 +33,32 @@ body {
 }
 .navbar {
   background-color: #ffffff;
+}
+
+.navbar.container.li.a {
+  &:hover {
+    background-color: dimgrey;
+  }
+}
+.style_image 
+{
+  	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+}
+
+.style_image_small 
+{
+  	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+}
+
+.center
+{
+	text-align: center;
 }

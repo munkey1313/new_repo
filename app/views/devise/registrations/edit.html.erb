@@ -1,5 +1,3 @@
-<h2 id="changeText">Edit <%= resource_name.to_s.humanize %></h2>
-
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
 
@@ -7,9 +5,10 @@
       <div style="text-align:center;"><img src="http://edpov.stanford.edu/sites/default/files/defaultUserIcon.png"></div>
       <br />
     <% else %>
-      <div style="text-align:center;"><%= image_tag(@member.image.url(:medium)) %></div>
-    <% end %>
+      <div style="text-align:center;"><%= image_tag @member.image.url(:medium), :class => "style_image"%></div>
+  <% end %>
 
+  <br />
   <div class="form-group">
    <%= f.text_field :username, class: "form-control", :autofocus => true, :placeholder => "Username" %>
   </div>

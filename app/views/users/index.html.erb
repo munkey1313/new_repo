@@ -1,7 +1,19 @@
-<body>
-
-<% @members.each do |m| %>
-<%= m.name %>
-<%end%>
-
-<body>
+<%= render 'pages/home' unless member_signed_in? %>
+<div class="row center">
+  <div class="col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+    	<% @members.each do |user| %>
+	      <div class="panel-heading">
+	        <%= image_tag user.image.url(:medium), :class => "style_image" %>
+	      </div>
+	      <div class="panel-body">
+	        <h2><%= link_to user.name, user_path(user.id) %><h2>
+	      </div>
+	      <div>
+	      	<%= render 'shared/stats' %>
+	      </div>
+	     <% end %>
+    </div>
+  </div>
+</div>
+<br />
