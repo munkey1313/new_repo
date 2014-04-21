@@ -6,8 +6,6 @@ We recommend that you use [*Digital Ocean*](http://www.sourcetreeapp.com/downloa
 
 ## Contact Information
 
-### Owners of the Repository
-
 [*Aaron Bodell*](https://bitbucket.org/abodell)
 
 Name: Justin Brooks
