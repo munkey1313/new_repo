@@ -1,14 +1,20 @@
 <div class="row center">
   <div class="col-md-offset-2 col-md-8">
     <div class="panel panel-default">
+      
       <div class="panel-heading">
+        <!-- displays the image and size -->
         <%= image_tag @member.image.url(:medium), :class => "style_image" %>
       </div>
+      
       <div class="panel-body">
+        <!-- links the user name so it can be displayed -->
         <p><%= @member.name %></p>
+        <!-- check if member is signed in -->
         <%= render 'follow_form' if signed_in? %>
       </div>
       <div>
+        <!-- displays stats -->
         <%= render 'shared/stats' %>
       </div>
     </div>

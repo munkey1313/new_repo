@@ -1,4 +1,5 @@
-<% if current_member != @member %>
+<!-- Controller to render a unfollow and follow -->
+<% if current_member != @member %><!-- if the current user is not the current member -->
   <div id="follow_form">
   <% if current_member.following?(@member) %>
     <%= render 'unfollow' %>

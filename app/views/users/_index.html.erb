@@ -1,5 +1,5 @@
 
-
+<!-- page to dispaly the member image if it exsists or not -->
 <% if @members.present? %>
 
 <table>
@@ -11,21 +11,21 @@
 
   <tbody>
     <% @members.each do |member| %>
-    <% if member == current_member %>
+    <% if member == current_member %><!-- if its the member your looking for -->
       <tr>
         <td><h2><%= link_to member.username, user_path(member.id) %> (me)<h2> </td>
         <% if member.image.blank? %>
         
-        <% else %>
+        <% else %><!-- displays the members image -->
            <td><%=  image_tag member.image.url(:thumb), :class => "style_image_small" %></td>
         <% end %>
       </tr>
-    <% else %>
+    <% else %><!-- if its NOT the member your looking for -->
       <tr>
         <td><h2><%= link_to member.username, user_path(member.id) %><h2></td>
-        <% if member.image.blank? %>
+        <% if member.image.blank? %><!-- is there an image -->
 
-        <% else %>
+        <% else %><!-- displays the members image -->
            <td><%=  image_tag member.image.url(:thumb), :class => "style_image_small" %></td>
         <% end %>
       </tr>
