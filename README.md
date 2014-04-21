@@ -11,4 +11,4 @@ We recommend that you use [*Digital Ocean*](http://www.sourcetreeapp.com/downloa
 [*Aaron Bodell*](https://bitbucket.org/abodell)
 
 Name: Justin Brooks
-Email: fantasyimmortals@gmail.com)
+Email: fantasyimmortals@gmail.com
