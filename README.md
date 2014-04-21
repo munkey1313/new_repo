@@ -9,4 +9,6 @@ We recommend that you use [*Digital Ocean*](http://www.sourcetreeapp.com/downloa
 ### Owners of the Repository
 
 [*Aaron Bodell*](https://bitbucket.org/abodell)
-[*Justin Brooks*](fantasyimmortals@gmail.com)
+
+Name: Justin Brooks
+Email: fantasyimmortals@gmail.com)
