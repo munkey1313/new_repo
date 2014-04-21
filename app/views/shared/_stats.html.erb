@@ -1,13 +1,19 @@
+<!--Controller to call the amount to followers and followed, kind of like how facebook does it.-->
 <% @member ||= current_member %>
 <div class="">
+  <!--links to followed members-->
   <a href="<%= following_user_path(@member) %>">
     <strong id="following" class="">
+      <!--calls followed count-->
       <%= @member.followed_member.count %>
     </strong>
     following
   </a>
+
+  <!--links to follower members-->
   <a href="<%= followers_user_path(@member) %>">
     <strong id="followers" class="">
+      <!--calls followers count-->
       <%= @member.followers.count %>
     </strong>
     followers

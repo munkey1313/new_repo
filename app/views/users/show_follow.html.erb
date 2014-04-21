@@ -1,18 +1,24 @@
+<!-- displays users your following -->
+
 <div class="center">
+  <!-- displays stats about user -->
   <%= render 'shared/stats' %>
 </div>
 <br />
 <div class="row center">
   <div class="col-md-offset-2 col-md-8">
     <div class="panel panel-default">
-      <% if @members.any? %>
+      <% if @members.any? %><!-- are you following any users -->
         <ul class="users">
-          <% @members.each do |user| %>
+          <% @members.each do |user| %><!-- loops through the users -->
               <div class="panel-heading">
+                <!-- displays users image -->
                 <%= image_tag user.image.url(:medium), :class => "style_image" %>
               </div>
               <div class="panel-body">
+                <!-- displays users name -->
                 <h2><%= link_to user.name, user_path(user.id) %><h2>
+                  <!-- displays form and if the member is signed in -->
                 <%= render 'follow_form' if signed_in? %>
               </div>
             <% end %>

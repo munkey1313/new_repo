@@ -1,10 +1,13 @@
+<!--Controller for friendship verify-->
 <% if flash[:error] %>
 Not found.
 <% else %>
+	<!--display the user you picked name-->
 	<div class="page-header">
 		<h1><% @friend.full_name %></h1>
 	</div>
 
+	<!--promopt for user-->
 	<p>Do you really want to friend <%= @friend.full_name %>?</p>
 
 <% end %>
