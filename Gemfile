@@ -13,7 +13,7 @@ group :production do
      gem 'rails_12factor'
 end
 
-#devise 
+#devise https://github.com/plataformatec/devise
 gem 'devise'
 
 # Paperclip https://github.com/thoughtbot/paperclip

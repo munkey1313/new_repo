@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  #When we created our devise install, we named it member instead of user, but we are using UsersController to control the members database
-  #Look at Devise documentation to know how to use devise methods for controlloing user sign ins and sign ups, etc...
+  #W hen we created our devise install, we named it member instead of user, but we are using UsersController to control the members database
+  # Look at Devise documentation to know how to use devise methods for controlloing user sign ins and sign ups, etc...
   def member_params
     params.require(:member).permit(:image)
   end

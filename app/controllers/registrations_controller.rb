@@ -1,7 +1,11 @@
 class RegistrationsController < Devise::RegistrationsController
+
+  # Overrides the devise registration controller.
+  # We override the update action to allow users to update all information except their email and password 
+  # without their current password.
+
   def update
     @member = Member.find(current_member.id)
-
     successfully_updated = if needs_password?(@member, params)
       @member.update_with_password(devise_parameter_sanitizer.sanitize(:account_update))
     else

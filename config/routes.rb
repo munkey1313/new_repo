@@ -2,6 +2,7 @@ FantasyImmortals::Application.routes.draw do
   get "dashboard/show"
   resources :leagues
   resources :relationships
+  # We must tell devise which controllers to use because we are customizing the functionality. 
   devise_for :members, :controllers => { :user_controller => "user_controller",:registrations => "registrations" }
   resources :users do
     member do
@@ -13,7 +14,6 @@ FantasyImmortals::Application.routes.draw do
   get '/contact ' => "pages#contact"
   get '/dashboard' => "pages#dashboard"
   get '/members', :to => "users#index"
-
   get '/members/:id', :to => "users#show"
 
   # The priority is based upon order of creation: first created -> highest priority.
