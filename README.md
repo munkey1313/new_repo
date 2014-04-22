@@ -10,3 +10,7 @@ We recommend that you use [*Digital Ocean*](http://www.sourcetreeapp.com/downloa
 
 Name: Justin Brooks
 Email: fantasyimmortals@gmail.com
+
+## Known Bugs
+
+If you are not logged in and navigate to views outside the "pages" views it will cause the application to crash.
