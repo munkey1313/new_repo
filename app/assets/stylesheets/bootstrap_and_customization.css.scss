@@ -11,6 +11,7 @@ body {
 #search-form {
   width: 25%;
 }
+
 #uniform {
 	background: whitesmoke;
 	border-radius: 25px;
@@ -25,11 +26,7 @@ body {
 .hometitle{font-family: 'Andalus';}
 .homesubtitle{font-family: 'Comic Sans MS';}
 
-.container 
-{
-	width: 1060px;
-	
-}
+
 
 .container-dash{
 	width: 1200px;
@@ -39,19 +36,31 @@ body {
 }
 
 #lrgLink {
-	a:hover {color:black}
+	a:hover 
+	{
+		color:black
+	}
 }
 
+.navbar-toggle
+{
+	background-color: black;
+}
+
+.navbar-toggle
+{
+	:hover
+	{
+		background-color: white;
+	}
+	background-color: black;
+}
 
 .navbar {
-  background-color: #ffffff;
+  background-color: white;
 }
 
-.navbar.container.li.a {
-  &:hover {
-    background-color: dimgrey;
-  }
-}
+
 .style_image 
 {
   	width: 200px;
