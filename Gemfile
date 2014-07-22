@@ -13,6 +13,8 @@ group :production do
      gem 'rails_12factor'
 end
 
+gem 'protected_attributes'
+
 #devise https://github.com/plataformatec/devise
 gem 'devise'
 
