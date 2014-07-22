@@ -14,3 +14,5 @@ Email: fantasyimmortals@gmail.com
 ## Known Bugs
 
 If you are not logged in and navigate to views outside the "pages" views it will cause the application to crash.
+
+[ ![Codeship Status for munkey1313/new_repo](https://www.codeship.io/projects/9af9a710-f377-0131-703c-46df43419009/status)](https://www.codeship.io/projects/27894)
