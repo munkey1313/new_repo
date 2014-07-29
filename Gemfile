@@ -5,13 +5,15 @@ gem 'rails', '4.0.0'
 
 # Database Stuff
 group :development, :test do
-     gem 'sqlite3'
+    
 end
 
 group :production do
      gem 'pg'
      gem 'rails_12factor'
+
 end
+
 
 gem 'protected_attributes'
 

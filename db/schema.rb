@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140324234115) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "installs", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -28,8 +31,8 @@ ActiveRecord::Schema.define(version: 20140324234115) do
     t.datetime "updated_at"
   end
 
-  add_index "installs", ["email"], name: "index_installs_on_email", unique: true
-  add_index "installs", ["reset_password_token"], name: "index_installs_on_reset_password_token", unique: true
+  add_index "installs", ["email"], name: "index_installs_on_email", unique: true, using: :btree
+  add_index "installs", ["reset_password_token"], name: "index_installs_on_reset_password_token", unique: true, using: :btree
 
   create_table "leagues", force: true do |t|
     t.string   "name"
@@ -38,7 +41,7 @@ ActiveRecord::Schema.define(version: 20140324234115) do
     t.integer  "member_id"
   end
 
-  add_index "leagues", ["member_id"], name: "index_leagues_on_member_id"
+  add_index "leagues", ["member_id"], name: "index_leagues_on_member_id", using: :btree
 
   create_table "member_friendships", force: true do |t|
     t.integer  "member_id"
@@ -47,7 +50,7 @@ ActiveRecord::Schema.define(version: 20140324234115) do
     t.datetime "updated_at"
   end
 
-  add_index "member_friendships", ["member_id", "friend_id"], name: "index_member_friendships_on_member_id_and_friend_id"
+  add_index "member_friendships", ["member_id", "friend_id"], name: "index_member_friendships_on_member_id_and_friend_id", using: :btree
 
   create_table "members", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -71,8 +74,8 @@ ActiveRecord::Schema.define(version: 20140324234115) do
     t.datetime "image_updated_at"
   end
 
-  add_index "members", ["email"], name: "index_members_on_email", unique: true
-  add_index "members", ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
+  add_index "members", ["email"], name: "index_members_on_email", unique: true, using: :btree
+  add_index "members", ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true, using: :btree
 
   create_table "relationships", force: true do |t|
     t.integer  "follower_id"
@@ -81,8 +84,8 @@ ActiveRecord::Schema.define(version: 20140324234115) do
     t.datetime "updated_at"
   end
 
-  add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id"
-  add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
-  add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
+  add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id", using: :btree
+  add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true, using: :btree
+  add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id", using: :btree
 
 end
