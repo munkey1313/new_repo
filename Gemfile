@@ -5,7 +5,7 @@ gem 'rails', '4.0.0'
 
 # Database Stuff
 group :development, :test do
-    
+    gem 'mysql2'
 end
 
 group :production do
