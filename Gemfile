@@ -17,7 +17,6 @@ group :production do
 end
 
 
-gem 'protected_attributes'
 
 #devise https://github.com/plataformatec/devise
 gem 'devise'
