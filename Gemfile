@@ -16,10 +16,12 @@ group :production do
 
 end
 
+#gem 'protected_attributes'
+
 
 
 #devise https://github.com/plataformatec/devise
-gem 'devise'
+gem 'devise', '3.0.0.rc'
 
 # Paperclip https://github.com/thoughtbot/paperclip
 gem 'paperclip', '~> 3.0'
